@@ -192,7 +192,7 @@ async def start_battle(ps_websocket_client, pokemon_battle_type):
     else:
         battle = await start_standard_battle(ps_websocket_client, pokemon_battle_type)
 
-    await ps_websocket_client.send_message(battle.battle_tag, ["hf"])
+    await ps_websocket_client.send_message(battle.battle_tag, ["Good Luck! This is a bot run by showdown user Link0069 (Discord: Link#0069)"])
     await ps_websocket_client.send_message(battle.battle_tag, ['/timer on'])
 
     return battle

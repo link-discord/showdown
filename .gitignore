@@ -8,3 +8,4 @@ creds
 *.txt
 suspect_decisions.py
 teams/teams
+env
