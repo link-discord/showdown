@@ -209,6 +209,7 @@ async def pokemon_battle(ps_websocket_client, pokemon_battle_type):
                 winner = None
             logger.debug("Winner: {}".format(winner))
             await ps_websocket_client.send_message(battle.battle_tag, ["gg"])
+            await ps_websocket_client.send_message(battle.battle_tag, ['/avatar hilda-masters'])
             await ps_websocket_client.leave_battle(battle.battle_tag, save_replay=ShowdownConfig.save_replay)
             return winner
         else:
