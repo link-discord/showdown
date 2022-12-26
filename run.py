@@ -41,6 +41,7 @@ def check_dictionaries_are_unmodified(original_pokedex, original_move_json):
 
 
 async def showdown():
+    ShowdownConfig.configure()
     apply_mods(ShowdownConfig.pokemon_mode)
 
     original_pokedex = deepcopy(pokedex)
@@ -90,4 +91,4 @@ async def showdown():
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(showdown())
+    asyncio.run(showdown())
