@@ -19543,6 +19543,8 @@
         "eggGroups": [
             "Undiscovered"
         ],
+        "requiredItem": "Adamant Crystal",
+        "changesFrom": "Dialga",
         "gen": 8
     },
     "palkia": {
@@ -19610,6 +19612,8 @@
         "eggGroups": [
             "Undiscovered"
         ],
+        "requiredItem": "Lustrous Globe",
+        "changesFrom": "Palkia",
         "gen": 8
     },
     "heatran": {
@@ -19734,7 +19738,7 @@
         "eggGroups": [
             "Undiscovered"
         ],
-        "requiredItem": "Griseous Orb",
+        "requiredItem": "Griseous Core",
         "changesFrom": "Giratina"
     },
     "cresselia": {
@@ -39838,7 +39842,6 @@
         "weightkg": 320,
         "color": "Purple",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -39868,7 +39871,6 @@
         "weightkg": 8,
         "color": "Pink",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -39898,7 +39900,6 @@
         "weightkg": 21,
         "color": "Gray",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -39928,7 +39929,6 @@
         "weightkg": 4,
         "color": "Gray",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -39958,7 +39958,6 @@
         "weightkg": 92,
         "color": "Red",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -39988,7 +39987,6 @@
         "weightkg": 60,
         "color": "Gray",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40018,7 +40016,6 @@
         "weightkg": 240,
         "color": "Gray",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40048,7 +40045,6 @@
         "weightkg": 11,
         "color": "Red",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40078,7 +40074,6 @@
         "weightkg": 380.7,
         "color": "Gray",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40108,7 +40103,6 @@
         "weightkg": 111,
         "color": "Blue",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40138,7 +40132,6 @@
         "weightkg": 36,
         "color": "Yellow",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40168,7 +40161,6 @@
         "weightkg": 303,
         "color": "Green",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40500,7 +40492,6 @@
         "weightkg": 380,
         "color": "Green",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [
@@ -40530,7 +40521,6 @@
         "weightkg": 35,
         "color": "White",
         "tags": [
-            "Sub-Legendary",
             "Paradox"
         ],
         "eggGroups": [

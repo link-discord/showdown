@@ -264,6 +264,21 @@ class TestBattleMechanics(unittest.TestCase):
 
         self.assertEqual(expected_instructions, instructions)
 
+    def test_pkmn_with_goodasgold_cannot_be_dragged(self):
+        bot_move = "whirlwind"
+        opponent_move = "splash"
+        self.state.opponent.active.ability = "goodasgold"
+        instructions = get_all_state_instructions(self.mutator, bot_move, opponent_move)
+        expected_instructions = [
+            TransposeInstruction(
+                1,
+                [],
+                False
+            )
+        ]
+
+        self.assertEqual(expected_instructions, instructions)
+
     def test_haze_removes_status_boosts(self):
         bot_move = "haze"
         opponent_move = "splash"
@@ -7363,6 +7378,47 @@ class TestBattleMechanics(unittest.TestCase):
                 [
                 ],
                 False
+            )
+        ]
+
+        self.assertEqual(expected_instructions, instructions)
+
+    def test_sleep_clause_prevents_multiple_pokemon_from_being_asleep(self):
+        bot_move = "spore"
+        opponent_move = "splash"
+        self.state.opponent.reserve["yveltal"].status = constants.SLEEP
+        instructions = get_all_state_instructions(self.mutator, bot_move, opponent_move)
+        expected_instructions = [
+            TransposeInstruction(
+                1,
+                [],
+                False
+            )
+        ]
+
+        self.assertEqual(expected_instructions, instructions)
+
+    def test_fainted_pokemon_cannot_cause_sleepclause(self):
+        bot_move = "spore"
+        opponent_move = "splash"
+        self.state.opponent.reserve["yveltal"].status = constants.SLEEP
+        self.state.opponent.reserve["yveltal"].hp = 0
+        instructions = get_all_state_instructions(self.mutator, bot_move, opponent_move)
+        expected_instructions = [
+            TransposeInstruction(
+                0.33,
+                [
+                    (constants.MUTATOR_APPLY_STATUS, constants.OPPONENT, constants.SLEEP),
+                    (constants.MUTATOR_REMOVE_STATUS, constants.OPPONENT, constants.SLEEP)
+                ],
+                False
+            ),
+            TransposeInstruction(
+                0.6699999999999999,
+                [
+                    (constants.MUTATOR_APPLY_STATUS, constants.OPPONENT, constants.SLEEP)
+                ],
+                True
             )
         ]
 
